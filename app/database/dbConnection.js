@@ -1,5 +1,14 @@
 const mongoose = require('mongoose');
-const { uri } = require('../config');
 
-// db connection
-mongoose.connect('mongodb+srv://oskarhermanowski:AIHWdBWaA2p7bKpb@cluster0.fjfhcmn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {});
+mongoose.connect(process.env.MONGO_URI, {})
+  .then(() => console.log('✅ Połączono z MongoDB Atlas'))
+  .catch(err => console.error('❌ Błąd połączenia z MongoDB:', err));
+
+// dodatkowe logi — w razie utraty połączenia
+mongoose.connection.on('error', err => {
+  console.error('❌ Błąd połączenia z MongoDB:', err);
+});
+
+mongoose.connection.once('open', () => {
+  console.log('✅ MongoDB: połączenie otwarte.');
+});
