@@ -1,4 +1,4 @@
-const allowedOrigins = ['https://oXDD.github.io']
+const allowedOrigins = ['https://oskarhermanowski.github.io']
 
 const corsOptions = {
     origin: function (origin, callback) {
