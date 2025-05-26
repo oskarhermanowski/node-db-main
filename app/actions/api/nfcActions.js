@@ -36,7 +36,6 @@ class NfcActions {
         }
 
         resp.status(201).json(nfc);
-        console.log(resp);
         console.log("NFC info saved successfully");
     }
 
