@@ -1,4 +1,4 @@
-const allowedOrigins = ['http://https://oskarhermanowski.github.io']
+const allowedOrigins = ['https://oskarhermanowski.github.io/NFC-doctor-main/']
 
 const corsOptions = {
     origin: function (origin, callback) {
