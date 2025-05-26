@@ -20,8 +20,6 @@ class NfcActions {
             nfc = new NFC({
                 firstName: firstName,
                 lastName: lastName,
-                index: index,
-                batchNumber: batchNumber,
                 pesel: pesel,
                 birthDate: birthDate,
                 bloodType: bloodType,
