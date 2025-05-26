@@ -12,7 +12,6 @@ class NfcActions {
         const allergies = req.body.allergies;
         const medications = req.body.medications;
         const assignedDoctorId = req.body.assignedDoctorId;
-        const lastUpdate = req.body.lastUpdate;
 
         let nfc;
 
@@ -26,7 +25,6 @@ class NfcActions {
                 allergies: allergies,
                 medications: medications,
                 assignedDoctorId: assignedDoctorId,
-                lastUpdate: lastUpdate
             });
             await nfc.save();
         } catch (error) {
