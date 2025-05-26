@@ -14,6 +14,8 @@ class NfcActions {
         const assignedDoctorId = req.body.assignedDoctorId;
 
         let nfc;
+        console.log("Saving NFC info...");
+
 
         try {
             nfc = new NFC({
@@ -26,6 +28,7 @@ class NfcActions {
                 medications: medications,
                 assignedDoctorId: assignedDoctorId,
             });
+            console.log("NFC info created:");
             await nfc.save();
         } catch (error) {
             return resp.status(422).json({message: error.message})
